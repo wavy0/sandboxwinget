@@ -1,5 +1,5 @@
 $progressPreference = 'silentlyContinue'
-New-Item -Type Directory -Path $env:TEMP\Temp | Out-Null
+New-Item -Type Directory -Path $env:TEMP\temp | Out-Null
 echo "Downloading Xaml..."
 Invoke-WebRequest -Uri https://globalcdn.nuget.org/packages/microsoft.ui.xaml.2.7.0.nupkg -OutFile "$env:TEMP\temp\xaml.zip" -UseBasicParsing
 Expand-Archive -Path $env:TEMP\temp\xaml.zip -Force -DestinationPath $env:TEMP\temp\
